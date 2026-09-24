@@ -1,24 +1,21 @@
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="google-site-verification" content="nM3hV_9UfLzxaX_Sb6KeanAae1e948MXGBm-qP8jMfU" />
+
 <title>Swalleh Prints | Printing & Branding Solutions</title>
 
-<meta name="description"
-content="Swalleh Prints offers T-shirt printing, graphic design, branding, posters, stickers, banners and other printing solutions in Kenya.">
+<meta name="description" content="Swalleh Prints offers T-shirt printing, graphic design, branding, posters, stickers, banners, caps and printing solutions in Kenya.">
 
 <style>
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
@@ -26,1236 +23,659 @@ html{
 }
 
 body{
-    background:#05050a;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050510;
     color:#ffffff;
-    overflow-x:hidden;
+    line-height:1.6;
 }
 
 a{
     text-decoration:none;
-}
-
-button{
-    font:inherit;
-}
-
-:root{
-    --neon:#00f5ff;
-    --purple:#9d00ff;
-    --pink:#ff00d4;
-    --dark:#05050a;
-    --card:#0d0d16;
-    --text:#ffffff;
-    --muted:#a7a7b7;
-}
-
-body::before{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:var(--purple);
-    filter:blur(180px);
-    opacity:.12;
-    top:-150px;
-    left:-150px;
-    z-index:-1;
-}
-
-body::after{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:var(--neon);
-    filter:blur(180px);
-    opacity:.08;
-    bottom:-150px;
-    right:-150px;
-    z-index:-1;
+    color:inherit;
 }
 
 header{
-    min-height:100vh;
-    background:
-        linear-gradient(rgba(5,5,10,.78),rgba(5,5,10,.96)),
-        radial-gradient(circle at top right,#21004d,transparent 40%);
-    border-bottom:1px solid rgba(0,245,255,.15);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,16,0.95);
+    border-bottom:1px solid #00f7ff;
+    backdrop-filter:blur(10px);
 }
 
 .navbar{
     max-width:1200px;
     margin:auto;
-    padding:20px;
+    padding:18px 20px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:20px;
+    align-items:center;
 }
 
 .logo{
-    font-size:24px;
-    font-weight:900;
-    letter-spacing:.5px;
+    font-size:25px;
+    font-weight:bold;
+    color:#00f7ff;
+    text-shadow:0 0 10px #00f7ff;
 }
 
 .logo span{
-    color:var(--neon);
-    text-shadow:
-        0 0 8px var(--neon),
-        0 0 20px rgba(0,245,255,.6);
+    color:#ff00d4;
+    text-shadow:0 0 10px #ff00d4;
 }
 
-.logo small{
-    display:block;
-    font-size:9px;
-    color:var(--muted);
-    letter-spacing:3px;
-    margin-top:3px;
-}
-
-.nav-links{
+nav{
     display:flex;
-    gap:25px;
-    align-items:center;
+    gap:22px;
 }
 
-.nav-links a{
-    color:#ddd;
-    font-size:14px;
+nav a{
     font-weight:bold;
-    transition:.3s;
+    color:#ffffff;
+    transition:0.3s;
 }
 
-.nav-links a:hover{
-    color:var(--neon);
-    text-shadow:0 0 10px var(--neon);
-}
-
-.nav-button{
-    background:transparent;
-    color:var(--neon);
-    border:1px solid var(--neon);
-    padding:9px 17px;
-    border-radius:25px;
-}
-
-.nav-button:hover{
-    background:var(--neon);
-    color:#000;
-    box-shadow:0 0 20px rgba(0,245,255,.6);
+nav a:hover{
+    color:#00f7ff;
+    text-shadow:0 0 8px #00f7ff;
 }
 
 .hero{
-    max-width:1100px;
-    margin:auto;
-    padding:100px 20px 120px;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
+    padding:80px 20px;
+    background:
+        radial-gradient(circle at top,#15155c 0%,#050510 55%);
 }
 
-.hero-badge{
-    display:inline-block;
-    padding:9px 18px;
-    border:1px solid rgba(0,245,255,.4);
-    border-radius:30px;
-    color:var(--neon);
-    background:rgba(0,245,255,.05);
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing:1px;
-    box-shadow:0 0 20px rgba(0,245,255,.08);
-    margin-bottom:25px;
+.hero-content{
+    max-width:850px;
 }
 
 .hero h1{
-    font-size:68px;
+    font-size:clamp(42px,8vw,80px);
     line-height:1.05;
-    font-weight:900;
-    max-width:950px;
-    margin:auto;
+    margin-bottom:20px;
+    color:#00f7ff;
+    text-shadow:
+        0 0 10px #00f7ff,
+        0 0 25px #00f7ff;
 }
 
 .hero h1 span{
-    color:var(--neon);
+    color:#ff00d4;
     text-shadow:
-        0 0 8px var(--neon),
-        0 0 25px rgba(0,245,255,.6);
+        0 0 10px #ff00d4,
+        0 0 25px #ff00d4;
 }
 
 .hero p{
-    max-width:700px;
-    margin:25px auto;
-    color:#bcbccc;
-    font-size:18px;
-    line-height:1.7;
+    font-size:20px;
+    color:#dddddd;
+    margin-bottom:30px;
 }
 
-.hero-buttons{
+.buttons{
     display:flex;
     justify-content:center;
     gap:15px;
     flex-wrap:wrap;
-    margin-top:35px;
 }
 
 .btn{
     display:inline-block;
-    padding:15px 28px;
+    padding:14px 25px;
     border-radius:30px;
     font-weight:bold;
-    transition:.3s;
+    transition:0.3s;
 }
 
 .btn-primary{
-    background:var(--neon);
-    color:#000;
-    box-shadow:0 0 20px rgba(0,245,255,.3);
+    background:#00f7ff;
+    color:#000000;
+    box-shadow:0 0 15px #00f7ff;
 }
 
 .btn-primary:hover{
     transform:translateY(-3px);
-    box-shadow:
-        0 0 15px var(--neon),
-        0 0 35px rgba(0,245,255,.5);
+    box-shadow:0 0 30px #00f7ff;
 }
 
 .btn-secondary{
-    color:white;
-    border:1px solid #555;
-    background:#11111a;
+    border:2px solid #ff00d4;
+    color:#ff00d4;
+    box-shadow:0 0 12px rgba(255,0,212,0.5);
 }
 
 .btn-secondary:hover{
-    border-color:var(--purple);
-    box-shadow:0 0 20px rgba(157,0,255,.3);
-    transform:translateY(-3px);
+    background:#ff00d4;
+    color:#000000;
+}
+
+section{
+    padding:80px 20px;
 }
 
 .container{
-    width:92%;
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
-}
-
-.section{
-    padding:90px 0;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title .tag{
-    color:var(--neon);
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing:2px;
-    margin-bottom:10px;
+    margin-bottom:45px;
 }
 
 .section-title h2{
     font-size:38px;
-    margin-bottom:12px;
+    color:#00f7ff;
+    text-shadow:0 0 10px #00f7ff;
 }
 
 .section-title p{
-    color:var(--muted);
-    max-width:650px;
-    margin:auto;
-    line-height:1.6;
+    color:#bbbbbb;
+    margin-top:10px;
 }
 
 .services{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
 }
 
-.service{
-    background:
-        linear-gradient(145deg,#10101b,#08080e);
-    border:1px solid #202032;
-    padding:30px 25px;
+.service-card{
+    background:#0c0c20;
+    border:1px solid #27274d;
     border-radius:18px;
-    position:relative;
-    overflow:hidden;
-    transition:.3s;
+    padding:28px 22px;
+    text-align:center;
+    transition:0.3s;
 }
 
-.service::before{
-    content:"";
-    position:absolute;
-    width:100px;
-    height:100px;
-    background:var(--purple);
-    filter:blur(70px);
-    opacity:.12;
-    right:-40px;
-    top:-40px;
-}
-
-.service:hover{
-    transform:translateY(-7px);
-    border-color:var(--neon);
-    box-shadow:
-        0 10px 40px rgba(0,245,255,.08),
-        0 0 20px rgba(0,245,255,.05);
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:#00f7ff;
+    box-shadow:0 0 25px rgba(0,247,255,0.3);
 }
 
 .service-icon{
     font-size:42px;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
-.service h3{
-    font-size:20px;
+.service-card h3{
+    color:#ff00d4;
     margin-bottom:10px;
 }
 
-.service p{
-    color:var(--muted);
-    line-height:1.6;
-    font-size:14px;
+.service-card p{
+    color:#cccccc;
 }
 
-.why{
+.about{
+    background:#08081a;
+}
+
+.about-content{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:40px;
     align-items:center;
 }
 
-.why-text h2{
-    font-size:38px;
-    margin-bottom:20px;
-}
-
-.why-text h2 span{
-    color:var(--neon);
-}
-
-.why-text p{
-    color:var(--muted);
-    line-height:1.8;
-    margin-bottom:20px;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.feature{
-    background:#0d0d15;
-    border:1px solid #202032;
-    border-radius:14px;
-    padding:18px;
-}
-
-.feature strong{
-    display:block;
-    margin-bottom:6px;
-    color:white;
-}
-
-.feature span{
-    color:var(--muted);
-    font-size:13px;
-}
-
-.neon-box{
-    min-height:420px;
-    border:1px solid var(--neon);
-    border-radius:25px;
-    background:
-        radial-gradient(circle at center,rgba(0,245,255,.12),transparent 55%),
-        #08080e;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
+.about-box{
+    background:#0d0d24;
     padding:30px;
-    box-shadow:
-        inset 0 0 40px rgba(0,245,255,.05),
-        0 0 30px rgba(0,245,255,.05);
+    border-radius:18px;
+    border:1px solid #252550;
 }
 
-.neon-box-inner{
-    max-width:350px;
-}
-
-.neon-logo{
-    font-size:42px;
-    font-weight:900;
-    color:var(--neon);
-    text-shadow:
-        0 0 10px var(--neon),
-        0 0 30px rgba(0,245,255,.5);
+.about-box h3{
+    color:#00f7ff;
     margin-bottom:15px;
+    font-size:26px;
 }
 
-.neon-box p{
-    color:#aaa;
-    line-height:1.6;
+.about-box p{
+    color:#cccccc;
 }
 
-.process{
+.steps{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
 
 .step{
     text-align:center;
-    padding:25px 15px;
+    padding:25px;
+    background:#0c0c20;
+    border-radius:18px;
+    border:1px solid #27274d;
 }
 
 .step-number{
     width:55px;
     height:55px;
-    margin:0 auto 18px;
-    border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    border:1px solid var(--neon);
-    color:var(--neon);
-    font-weight:900;
-    font-size:20px;
-    box-shadow:0 0 15px rgba(0,245,255,.15);
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:#ff00d4;
+    color:#000000;
+    font-size:22px;
+    font-weight:bold;
+    box-shadow:0 0 15px #ff00d4;
 }
 
 .step h3{
     margin-bottom:8px;
+    color:#ffffff;
 }
 
 .step p{
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.5;
+    color:#bbbbbb;
 }
 
 .cta{
-    margin:20px 0 80px;
-    padding:65px 25px;
     text-align:center;
-    border-radius:25px;
-    border:1px solid rgba(0,245,255,.4);
     background:
-        radial-gradient(circle at center,rgba(0,245,255,.08),transparent 55%),
-        #0a0a11;
+        radial-gradient(circle,#17175f 0%,#050510 70%);
 }
 
 .cta h2{
-    font-size:40px;
+    font-size:42px;
+    color:#ff00d4;
+    text-shadow:0 0 15px #ff00d4;
     margin-bottom:15px;
 }
 
 .cta p{
-    color:var(--muted);
-    margin-bottom:28px;
+    color:#cccccc;
+    margin-bottom:25px;
+}
+
+.contact{
+    background:#08081a;
 }
 
 .contact-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 .contact-card{
-    background:#0d0d15;
-    border:1px solid #202032;
+    padding:25px;
+    background:#0d0d24;
+    border:1px solid #27274d;
     border-radius:18px;
-    padding:30px;
+    text-align:center;
 }
 
 .contact-card h3{
-    margin-bottom:20px;
-    font-size:22px;
+    color:#00f7ff;
+    margin-bottom:10px;
 }
 
-.contact-item{
-    margin:18px 0;
-}
-
-.contact-item strong{
-    display:block;
-    color:var(--neon);
-    font-size:13px;
-    margin-bottom:5px;
-}
-
-.contact-item a,
-.contact-item span{
-    color:#ddd;
-}
-
-.contact-item a:hover{
-    color:var(--neon);
-}
-
-.whatsapp-big{
-    display:inline-block;
-    margin-top:10px;
-    padding:13px 22px;
-    border-radius:25px;
-    background:#25d366;
-    color:white;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.whatsapp-big:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 25px rgba(37,211,102,.3);
+.contact-card p{
+    color:#cccccc;
+    word-break:break-word;
 }
 
 footer{
-    background:#030306;
-    border-top:1px solid #171722;
-    padding:50px 20px 25px;
-}
-
-.footer-content{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:40px;
-}
-
-footer h2{
-    margin-bottom:12px;
-}
-
-footer h3{
-    margin-bottom:15px;
+    text-align:center;
+    padding:30px 20px;
+    background:#030308;
+    border-top:1px solid #1c1c3b;
 }
 
 footer p{
-    color:#858595;
-    line-height:1.7;
-    font-size:14px;
-    margin:6px 0;
+    color:#999999;
+    margin:5px 0;
 }
 
-footer a{
-    color:var(--neon);
+footer strong{
+    color:#00f7ff;
 }
 
-.footer-bottom{
-    max-width:1200px;
-    margin:40px auto 0;
-    padding-top:20px;
-    border-top:1px solid #171722;
-    text-align:center;
-    color:#666675;
-    font-size:13px;
-}
-
-.whatsapp-float{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25d366;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    color:white;
-    z-index:999;
-    box-shadow:0 5px 25px rgba(0,0,0,.5);
-    transition:.3s;
-}
-
-.whatsapp-float:hover{
-    transform:scale(1.1);
-}
-
-@media(max-width:850px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero{
-        padding:80px 20px 100px;
-    }
-
-    .hero h1{
-        font-size:48px;
-    }
-
-    .services{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .why{
-        grid-template-columns:1fr;
-    }
-
-    .process{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-content{
-        grid-template-columns:1fr;
-    }
-
-}
-
-@media(max-width:600px){
+@media(max-width:700px){
 
     .navbar{
-        padding:17px 15px;
+        flex-direction:column;
+        gap:12px;
     }
 
-    .logo{
-        font-size:20px;
+    nav{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
-    .nav-button{
-        padding:8px 13px;
-        font-size:12px;
+    nav a{
+        font-size:14px;
     }
 
     .hero{
-        padding:65px 15px 90px;
-    }
-
-    .hero h1{
-        font-size:38px;
+        min-height:80vh;
+        padding-top:60px;
     }
 
     .hero p{
-        font-size:15px;
+        font-size:17px;
     }
 
-    .section{
-        padding:65px 0;
+    section{
+        padding:60px 18px;
     }
 
     .section-title h2{
-        font-size:30px;
-    }
-
-    .services{
-        grid-template-columns:1fr;
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .process{
-        grid-template-columns:1fr;
-    }
-
-    .neon-box{
-        min-height:300px;
+        font-size:32px;
     }
 
     .cta h2{
-        font-size:30px;
+        font-size:32px;
     }
-
-    .whatsapp-float{
-        width:52px;
-        height:52px;
-        right:15px;
-        bottom:15px;
-        font-size:25px;
-    }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
-<header id="home">
+<header>
+    <div class="navbar">
+        <a href="#home" class="logo">
+            Swalleh <span>Prints</span>
+        </a>
 
-<nav class="navbar">
-
-<div class="logo">
-<span>SWALLEH</span> PRINTS
-<small>PRINTING • BRANDING • DESIGN</small>
-</div>
-
-<div class="nav-links">
-
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#process">How It Works</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-<a
-href="https://wa.me/254724566417"
-target="_blank"
-rel="noopener"
-class="nav-button"
->
-WhatsApp
-</a>
-
-</nav>
-
-<div class="hero">
-
-<div class="hero-badge">
-⚡ PRINTING & BRANDING SOLUTIONS
-</div>
-
-<h1>
-Turn Your Ideas Into
-<span>Something Real.</span>
-</h1>
-
-<p>
-Professional printing, T-shirt printing, graphic design
-and branding solutions for individuals, businesses,
-events and organizations.
-</p>
-
-<div class="hero-buttons">
-
-<a
-href="#services"
-class="btn btn-primary"
->
-Explore Our Services
-</a>
-
-<a
-href="https://wa.me/254724566417?text=Hello%20Swalleh%20Prints%20%F0%9F%91%8B%20I%20would%20like%20to%20make%20an%20inquiry."
-target="_blank"
-rel="noopener"
-class="btn btn-secondary"
->
-💬 Get a Quote
-</a>
-
-</div>
-
-</div>
-
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<section id="services" class="section">
+<main>
 
-<div class="container">
+<section class="hero" id="home">
+    <div class="hero-content">
 
-<div class="section-title">
+        <h1>
+            Swalleh <span>Prints</span>
+        </h1>
 
-<div class="tag">
-WHAT WE DO
-</div>
+        <p>
+            Printing & Branding Solutions for individuals,
+            businesses, events and organizations.
+        </p>
 
-<h2>
-Our Services
-</h2>
+        <div class="buttons">
+            <a
+                class="btn btn-primary"
+                href="https://wa.me/254724566417"
+                target="_blank"
+                rel="noopener"
+            >
+                Order on WhatsApp
+            </a>
 
-<p>
-From an idea on your phone to a finished branded
-product, we help bring your vision to life.
-</p>
+            <a class="btn btn-secondary" href="#services">
+                View Services
+            </a>
+        </div>
 
-</div>
+    </div>
+</section>
 
-<div class="services">
+<section id="services">
 
-<div class="service">
-<div class="service-icon">👕</div>
-<h3>T-Shirt Printing</h3>
-<p>
-Custom T-shirts for businesses, teams,
-events, groups, birthdays and personal use.
-</p>
-</div>
+    <div class="container">
 
-<div class="service">
-<div class="service-icon">🎨</div>
-<h3>Graphic Design</h3>
-<p>
-Logos, posters, flyers, social media designs,
-business cards and other creative designs.
-</p>
-</div>
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Quality printing and branding solutions for your needs.</p>
+        </div>
 
-<div class="service">
-<div class="service-icon">🪧</div>
-<h3>Branding</h3>
-<p>
-Give your business a professional identity with
-customized branding materials.
-</p>
-</div>
+        <div class="services">
 
-<div class="service">
-<div class="service-icon">📢</div>
-<h3>Banners & Posters</h3>
-<p>
-Promotional banners, posters and advertising
-materials for businesses and events.
-</p>
-</div>
+            <div class="service-card">
+                <div class="service-icon">👕</div>
+                <h3>T-Shirt Printing</h3>
+                <p>
+                    Customized T-shirts for businesses, events,
+                    teams, groups and personal occasions.
+                </p>
+            </div>
 
-<div class="service">
-<div class="service-icon">🏷️</div>
-<h3>Stickers & Labels</h3>
-<p>
-Product labels, stickers and customized
-promotional materials.
-</p>
-</div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Graphic Design</h3>
+                <p>
+                    Professional designs for logos, posters,
+                    advertisements, social media and more.
+                </p>
+            </div>
 
-<div class="service">
-<div class="service-icon">🧢</div>
-<h3>Caps & Merchandise</h3>
-<p>
-Customized caps and other branded merchandise
-for individuals, teams and businesses.
-</p>
-</div>
+            <div class="service-card">
+                <div class="service-icon">🏷️</div>
+                <h3>Branding</h3>
+                <p>
+                    Branding solutions to help your business
+                    stand out and look professional.
+                </p>
+            </div>
 
-</div>
+            <div class="service-card">
+                <div class="service-icon">🖼️</div>
+                <h3>Banners & Posters</h3>
+                <p>
+                    Attractive banners and posters for promotions,
+                    events, businesses and announcements.
+                </p>
+            </div>
 
-</div>
+            <div class="service-card">
+                <div class="service-icon">🏷️</div>
+                <h3>Stickers & Labels</h3>
+                <p>
+                    Custom stickers and labels for products,
+                    packaging, businesses and personal use.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🧢</div>
+                <h3>Caps & Merchandise</h3>
+                <p>
+                    Customized caps and merchandise for brands,
+                    groups, events and special occasions.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section id="about" class="section">
+<section class="about" id="about">
 
-<div class="container">
+    <div class="container">
 
-<div class="why">
+        <div class="section-title">
+            <h2>About Swalleh Prints</h2>
+            <p>Turning ideas into visible brands.</p>
+        </div>
 
-<div class="why-text">
+        <div class="about-content">
 
-<div class="section-title"
-style="text-align:left;margin-bottom:25px;">
+            <div class="about-box">
+                <h3>Who We Are</h3>
 
-<div class="tag">
-ABOUT SWALLEH PRINTS
-</div>
+                <p>
+                    Swalleh Prints is a printing and branding business
+                    focused on helping individuals, businesses,
+                    organizations and events bring their ideas to life.
+                </p>
+            </div>
 
-<h2>
-Your Ideas.
-<span>Our Creativity.</span>
-</h2>
+            <div class="about-box">
+                <h3>What We Do</h3>
 
-</div>
+                <p>
+                    From customized T-shirts and caps to posters,
+                    stickers, graphic designs and branding materials,
+                    we provide practical printing solutions tailored
+                    to your needs.
+                </p>
+            </div>
 
-<p>
-Swalleh Prints is a printing and branding business
-focused on helping individuals, businesses and
-organizations create professional-looking products
-and promotional materials.
-</p>
+        </div>
 
-<p>
-Whether you need a customized T-shirt, business
-branding, a poster, a sticker or a creative design,
-we aim to make the process simple and affordable.
-</p>
-
-<div class="features">
-
-<div class="feature">
-<strong>⚡ Creative</strong>
-<span>Modern and attractive designs.</span>
-</div>
-
-<div class="feature">
-<strong>💰 Affordable</strong>
-<span>Solutions designed for different budgets.</span>
-</div>
-
-<div class="feature">
-<strong>🎯 Custom</strong>
-<span>Designs made according to your needs.</span>
-</div>
-
-<div class="feature">
-<strong>💬 Easy Ordering</strong>
-<span>Talk to us directly through WhatsApp.</span>
-</div>
-
-</div>
-
-</div>
-
-<div class="neon-box">
-
-<div class="neon-box-inner">
-
-<div class="neon-logo">
-SWALLEH
-</div>
-
-<h3>
-PRINTS
-</h3>
-
-<p style="margin-top:15px;">
-Printing • Branding • Graphic Design
-</p>
-
-<p style="margin-top:20px;">
-Bringing ideas to life, one design at a time.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<section id="process" class="section">
+<section id="how-it-works">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-title">
+            <h2>How It Works</h2>
+            <p>Getting your order started is simple.</p>
+        </div>
 
-<div class="tag">
-SIMPLE PROCESS
-</div>
+        <div class="steps">
 
-<h2>
-How It Works
-</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Contact Us</h3>
+                <p>
+                    Send us a message on WhatsApp and tell us
+                    what you need.
+                </p>
+            </div>
 
-<p>
-Getting your printing or branding project started
-is simple.
-</p>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Share Your Idea</h3>
+                <p>
+                    Send your design, logo, text or explain
+                    what you want created.
+                </p>
+            </div>
 
-</div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Confirm Your Order</h3>
+                <p>
+                    We discuss the details, quantity and price
+                    before production.
+                </p>
+            </div>
 
-<div class="process">
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Get Your Product</h3>
+                <p>
+                    Your customized printing or branding order
+                    is prepared for you.
+                </p>
+            </div>
 
-<div class="step">
+        </div>
 
-<div class="step-number">1</div>
-
-<h3>
-Contact Us
-</h3>
-
-<p>
-Send us a WhatsApp message describing
-what you need.
-</p>
-
-</div>
-
-<div class="step">
-
-<div class="step-number">2</div>
-
-<h3>
-Share Your Idea
-</h3>
-
-<p>
-Send your logo, image, text or design
-requirements.
-</p>
-
-</div>
-
-<div class="step">
-
-<div class="step-number">3</div>
-
-<h3>
-Approve Design
-</h3>
-
-<p>
-We discuss the design and details before
-production.
-</p>
-
-</div>
-
-<div class="step">
-
-<div class="step-number">4</div>
-
-<h3>
-Get Your Product
-</h3>
-
-<p>
-Your finished printing or branding project
-is prepared for you.
-</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<section class="container">
+<section class="cta">
 
-<div class="cta">
+    <div class="container">
 
-<h2>
-Have a Project in Mind?
-</h2>
+        <h2>Ready to Print?</h2>
 
-<p>
-Tell us what you want to print or brand and
-let's discuss it.
-</p>
+        <p>
+            Let's turn your idea into something people can see.
+        </p>
 
-<a
-href="https://wa.me/254724566417?text=Hello%20Swalleh%20Prints%20%F0%9F%91%8B%20I%20have%20a%20printing%20or%20branding%20project."
-target="_blank"
-rel="noopener"
-class="btn btn-primary"
->
-💬 Start on WhatsApp
-</a>
+        <a
+            class="btn btn-primary"
+            href="https://wa.me/254724566417"
+            target="_blank"
+            rel="noopener"
+        >
+            Chat With Swalleh Prints
+        </a>
 
-</div>
+    </div>
 
 </section>
 
-<section id="contact" class="section">
+<section class="contact" id="contact">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch and let's discuss your printing needs.</p>
+        </div>
 
-<div class="tag">
-GET IN TOUCH
-</div>
+        <div class="contact-grid">
 
-<h2>
-Contact Us
-</h2>
+            <div class="contact-card">
+                <h3>WhatsApp</h3>
+                <p>+254 724 566 417</p>
 
-<p>
-Ready to print or brand something?
-Contact Swalleh Prints.
-</p>
+                <br>
 
-</div>
+                <a
+                    class="btn btn-primary"
+                    href="https://wa.me/254724566417"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Message Us
+                </a>
+            </div>
 
-<div class="contact-grid">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p>swallehgibon2@gmail.com</p>
+            </div>
 
-<div class="contact-card">
+            <div class="contact-card">
+                <h3>Location</h3>
+                <p>Kenya</p>
+            </div>
 
-<h3>
-📞 Let's Talk
-</h3>
+        </div>
 
-<div class="contact-item">
-
-<strong>
-WHATSAPP
-</strong>
-
-<a
-href="https://wa.me/254724566417"
-target="_blank"
-rel="noopener"
->
-0724 566 417
-</a>
-
-</div>
-
-<div class="contact-item">
-
-<strong>
-EMAIL
-</strong>
-
-<a href="mailto:swallehgibon2@gmail.com">
-swallehgibon2@gmail.com
-</a>
-
-</div>
-
-<div class="contact-item">
-
-<strong>
-LOCATION
-</strong>
-
-<span>
-Kenya
-</span>
-
-</div>
-
-<a
-href="https://wa.me/254724566417"
-target="_blank"
-rel="noopener"
-class="whatsapp-big"
->
-💬 Chat With Us
-</a>
-
-</div>
-
-<div class="contact-card">
-
-<h3>
-🖨️ What Can We Print?
-</h3>
-
-<div class="contact-item">
-<span>👕 Custom T-Shirts</span>
-</div>
-
-<div class="contact-item">
-<span>🧢 Custom Caps</span>
-</div>
-
-<div class="contact-item">
-<span>🪧 Posters & Banners</span>
-</div>
-
-<div class="contact-item">
-<span>🏷️ Stickers & Labels</span>
-</div>
-
-<div class="contact-item">
-<span>💼 Business Branding</span>
-</div>
-
-<div class="contact-item">
-<span>🎨 Graphic Design</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
+</main>
 
 <footer>
 
-<div class="footer-content">
+    <p>
+        © 2026 <strong>Swalleh Prints</strong>.
+        All Rights Reserved.
+    </p>
 
-<div>
-
-<h2>
-<span style="color:#00f5ff;">
-SWALLEH
-</span>
-Prints
-</h2>
-
-<p>
-Printing & branding solutions designed to help
-your ideas stand out.
-</p>
-
-<p>
-👕 Printing • 🎨 Design • 🪧 Branding
-</p>
-
-</div>
-
-<div>
-
-<h3>
-Quick Links
-</h3>
-
-<p>
-<a href="#home">Home</a>
-</p>
-
-<p>
-<a href="#services">Services</a>
-</p>
-
-<p>
-<a href="#about">About</a>
-</p>
-
-<p>
-<a href="#contact">Contact</a>
-</p>
-
-</div>
-
-<div>
-
-<h3>
-Contact
-</h3>
-
-<p>
-📞
-<a
-href="https://wa.me/254724566417"
-target="_blank"
-rel="noopener"
->
-0724 566 417
-</a>
-</p>
-
-<p>
-📧
-<a href="mailto:swallehgibon2@gmail.com">
-Email Us
-</a>
-</p>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-© 2026 Swalleh Prints.
-All Rights Reserved.
-
-</div>
+    <p>
+        Printing & Branding Solutions
+    </p>
 
 </footer>
-
-<a
-href="https://wa.me/254724566417"
-target="_blank"
-rel="noopener"
-class="whatsapp-float"
-aria-label="Chat with Swalleh Prints on WhatsApp"
->
-💬
-</a>
 
 </body>
 </html>
