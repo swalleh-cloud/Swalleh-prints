@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Swalleh Empire | Admin</title>
+<title>Swalleh Prints | Admin</title>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -90,6 +90,12 @@ body{
   font-size:16px;
   font-weight:bold;
   cursor:pointer;
+}
+
+.login-btn:disabled,
+.save-btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
 }
 
 #loginMessage{
@@ -400,7 +406,7 @@ textarea{
 
   <div class="login-box">
 
-    <h1>🛍️ Swalleh Empire</h1>
+    <h1>🖨️ Swalleh Prints</h1>
 
     <p>Administrator Login</p>
 
@@ -408,6 +414,7 @@ textarea{
 
       <div class="form-group">
         <label>Email</label>
+
         <input
           type="email"
           id="loginEmail"
@@ -418,6 +425,7 @@ textarea{
 
       <div class="form-group">
         <label>Password</label>
+
         <input
           type="password"
           id="loginPassword"
@@ -438,13 +446,14 @@ textarea{
 
 </div>
 
+
 <div id="adminPage">
 
 <header>
 
   <div class="header-inner">
 
-    <h1>🛍️ Swalleh Empire Admin</h1>
+    <h1>🖨️ Swalleh Prints Admin</h1>
 
     <div class="header-buttons">
 
@@ -468,32 +477,37 @@ textarea{
 
 </header>
 
+
 <div class="container">
 
   <div id="adminStatus"></div>
 
   <div class="admin-grid">
 
+
+    <!-- ADD PRODUCT / SERVICE -->
+
     <div class="panel">
 
       <h2 id="formTitle">
-        ➕ Add Product
+        ➕ Add Service
       </h2>
 
       <form id="productForm">
 
         <div class="form-group">
 
-          <label>Product Name</label>
+          <label>Service Name</label>
 
           <input
             type="text"
             id="productName"
-            placeholder="Example: Samsung A15"
+            placeholder="Example: T-Shirt Printing"
             required
           >
 
         </div>
+
 
         <div class="form-group">
 
@@ -502,12 +516,13 @@ textarea{
           <input
             type="number"
             id="productPrice"
-            placeholder="Example: 15000"
+            placeholder="Example: 500"
             min="0"
             required
           >
 
         </div>
+
 
         <div class="form-group">
 
@@ -517,37 +532,66 @@ textarea{
 
             <option value="">Select category</option>
 
-            <option value="phones">Phones</option>
-            <option value="chargers">Chargers</option>
-            <option value="power banks">Power Banks</option>
-            <option value="screen protectors">Screen Protectors</option>
-            <option value="audio">Audio</option>
-            <option value="smart watches">Smart Watches</option>
-            <option value="television">Television</option>
-            <option value="laptops">Laptops</option>
-            <option value="house appliances">House Appliances</option>
-            <option value="subwoofers">Subwoofers</option>
-            <option value="bluetooth speakers">Bluetooth Speakers</option>
-            <option value="neckband">Neckband</option>
-            <option value="phone cases">Phone Cases</option>
-            <option value="shavers">Shavers</option>
-            <option value="usb cables">USB Cables</option>
-            <option value="earphones">Earphones</option>
-            <option value="wall bracket">Wall Bracket</option>
-            <option value="ironboxes">Ironboxes</option>
-            <option value="charger controller">Charger Controller</option>
-            <option value="earpods">Earpods</option>
-            <option value="earbuds">Earbuds</option>
-            <option value="decoders">Decoders</option>
-            <option value="headphones">Headphones</option>
-            <option value="batteries">Batteries</option>
-            <option value="gaming accessories">Gaming Accessories</option>
-            <option value="solars">Solars</option>
-            <option value="tablets">Tablets</option>
+            <option value="t-shirt printing">
+              T-Shirt Printing
+            </option>
+
+            <option value="graphic design">
+              Graphic Design
+            </option>
+
+            <option value="branding">
+              Branding
+            </option>
+
+            <option value="banners">
+              Banners
+            </option>
+
+            <option value="posters">
+              Posters
+            </option>
+
+            <option value="stickers">
+              Stickers & Labels
+            </option>
+
+            <option value="caps">
+              Caps & Merchandise
+            </option>
+
+            <option value="business cards">
+              Business Cards
+            </option>
+
+            <option value="flyers">
+              Flyers
+            </option>
+
+            <option value="brochures">
+              Brochures
+            </option>
+
+            <option value="invitation cards">
+              Invitation Cards
+            </option>
+
+            <option value="signage">
+              Signage
+            </option>
+
+            <option value="printing">
+              General Printing
+            </option>
+
+            <option value="other">
+              Other
+            </option>
 
           </select>
 
         </div>
+
 
         <div class="form-group">
 
@@ -555,14 +599,15 @@ textarea{
 
           <textarea
             id="productDescription"
-            placeholder="Describe the product..."
+            placeholder="Describe the service or product..."
           ></textarea>
 
         </div>
 
+
         <div class="form-group">
 
-          <label>Product Image</label>
+          <label>Service/Product Image</label>
 
           <div id="imagePreview" class="image-preview">
             📷 Select an image
@@ -576,13 +621,15 @@ textarea{
 
         </div>
 
+
         <button
           type="submit"
           class="save-btn"
           id="saveButton"
         >
-          💾 Save Product
+          💾 Save Service
         </button>
+
 
         <button
           type="button"
@@ -597,11 +644,14 @@ textarea{
 
     </div>
 
+
+    <!-- SERVICES / PRODUCTS -->
+
     <div class="panel">
 
       <div class="products-header">
 
-        <h2>📦 Products</h2>
+        <h2>📦 Services & Products</h2>
 
         <button
           class="refresh-btn"
@@ -612,10 +662,13 @@ textarea{
 
       </div>
 
-      <div id="adminProducts" class="admin-products">
+      <div
+        id="adminProducts"
+        class="admin-products"
+      >
 
         <div class="empty">
-          Loading products...
+          Loading services...
         </div>
 
       </div>
@@ -627,6 +680,7 @@ textarea{
 </div>
 
 </div>
+
 
 <script>
 
@@ -648,8 +702,7 @@ window.supabase.createClient(
 
 
 /* =====================================================
-   IMPORTANT:
-   BUCKET NAME MUST MATCH SUPABASE EXACTLY
+   STORAGE BUCKET
 ===================================================== */
 
 const STORAGE_BUCKET =
@@ -727,15 +780,27 @@ function showStatus(message,type){
   adminStatus.className = "";
 
   if(type === "success"){
-    adminStatus.classList.add("status-success");
+
+    adminStatus.classList.add(
+      "status-success"
+    );
+
   }
 
   else if(type === "error"){
-    adminStatus.classList.add("status-error");
+
+    adminStatus.classList.add(
+      "status-error"
+    );
+
   }
 
   else{
-    adminStatus.classList.add("status-loading");
+
+    adminStatus.classList.add(
+      "status-loading"
+    );
+
   }
 
 }
@@ -760,11 +825,14 @@ loginForm.addEventListener(
     event.preventDefault();
 
     const email =
-      document.getElementById("loginEmail")
-      .value.trim();
+      document
+      .getElementById("loginEmail")
+      .value
+      .trim();
 
     const password =
-      document.getElementById("loginPassword")
+      document
+      .getElementById("loginPassword")
       .value;
 
     loginMessage.textContent =
@@ -773,14 +841,19 @@ loginForm.addEventListener(
     loginMessage.style.color =
       "#2563eb";
 
+
     const {
       data,
       error
     } =
     await supabaseClient.auth.signInWithPassword({
+
       email:email,
+
       password:password
+
     });
+
 
     if(error){
 
@@ -797,6 +870,7 @@ loginForm.addEventListener(
 
     }
 
+
     if(!data.session){
 
       loginMessage.textContent =
@@ -809,9 +883,12 @@ loginForm.addEventListener(
 
     }
 
-    loginPage.style.display = "none";
 
-    adminPage.style.display = "block";
+    loginPage.style.display =
+      "none";
+
+    adminPage.style.display =
+      "block";
 
     loadProducts();
 
@@ -831,15 +908,18 @@ async function checkSession(){
   } =
   await supabaseClient.auth.getSession();
 
+
   if(
     !error &&
     data &&
     data.session
   ){
 
-    loginPage.style.display = "none";
+    loginPage.style.display =
+      "none";
 
-    adminPage.style.display = "block";
+    adminPage.style.display =
+      "block";
 
     loadProducts();
 
@@ -847,9 +927,11 @@ async function checkSession(){
 
   else{
 
-    loginPage.style.display = "flex";
+    loginPage.style.display =
+      "flex";
 
-    adminPage.style.display = "none";
+    adminPage.style.display =
+      "none";
 
   }
 
@@ -864,9 +946,11 @@ async function logout(){
 
   await supabaseClient.auth.signOut();
 
-  adminPage.style.display = "none";
+  adminPage.style.display =
+    "none";
 
-  loginPage.style.display = "flex";
+  loginPage.style.display =
+    "flex";
 
   loginForm.reset();
 
@@ -882,9 +966,10 @@ async function loadProducts(){
   adminProducts.innerHTML =
   `
   <div class="empty">
-    Loading products...
+    Loading services...
   </div>
   `;
+
 
   const {
     data,
@@ -897,6 +982,7 @@ async function loadProducts(){
       ascending:false
     });
 
+
   if(error){
 
     console.error(
@@ -904,16 +990,18 @@ async function loadProducts(){
       error
     );
 
+
     showStatus(
-      "Could not load products: " +
+      "Could not load services: " +
       error.message,
       "error"
     );
 
+
     adminProducts.innerHTML =
     `
     <div class="empty">
-      ❌ Could not load products.
+      ❌ Could not load services.
     </div>
     `;
 
@@ -921,7 +1009,9 @@ async function loadProducts(){
 
   }
 
-  products = data || [];
+
+  products =
+    data || [];
 
   hideStatus();
 
@@ -936,15 +1026,23 @@ async function loadProducts(){
 
 function displayAdminProducts(){
 
-  adminProducts.innerHTML = "";
+  adminProducts.innerHTML =
+    "";
+
 
   if(!products.length){
 
     adminProducts.innerHTML =
     `
     <div class="empty">
-      📦 No products yet.<br><br>
-      Add your first product using the form.
+
+      📦 No services yet.
+
+      <br><br>
+
+      Add your first printing service
+      using the form.
+
     </div>
     `;
 
@@ -952,150 +1050,180 @@ function displayAdminProducts(){
 
   }
 
-  products.forEach(function(product){
 
-    const card =
-      document.createElement("div");
+  products.forEach(
+    function(product){
 
-    card.className =
-      "product-card";
+      const card =
+        document.createElement("div");
 
-    const image =
-      document.createElement("div");
+      card.className =
+        "product-card";
 
-    image.className =
-      "product-image";
 
-    if(product.image){
+      const image =
+        document.createElement("div");
 
-      const img =
-        document.createElement("img");
+      image.className =
+        "product-image";
 
-      img.src = product.image;
 
-      img.alt =
-        product.name || "Product";
+      if(product.image){
 
-      img.onerror =
+        const img =
+          document.createElement("img");
+
+        img.src =
+          product.image;
+
+        img.alt =
+          product.name ||
+          "Service";
+
+
+        img.onerror =
+          function(){
+
+            image.innerHTML =
+              "🖨️";
+
+          };
+
+
+        image.appendChild(img);
+
+      }
+
+      else{
+
+        image.textContent =
+          "🖨️";
+
+      }
+
+
+      const info =
+        document.createElement("div");
+
+      info.className =
+        "product-info";
+
+
+      const name =
+        document.createElement("h3");
+
+      name.textContent =
+        product.name ||
+        "Unnamed Service";
+
+
+      const category =
+        document.createElement("div");
+
+      category.className =
+        "product-category";
+
+      category.textContent =
+        product.category ||
+        "Printing";
+
+
+      const price =
+        document.createElement("div");
+
+      price.className =
+        "product-price";
+
+      price.textContent =
+        "KSh " +
+        Number(
+          product.price || 0
+        ).toLocaleString();
+
+
+      const description =
+        document.createElement("div");
+
+      description.className =
+        "product-description";
+
+      description.textContent =
+        product.description ||
+        "No description";
+
+
+      const buttons =
+        document.createElement("div");
+
+      buttons.className =
+        "action-buttons";
+
+
+      const editButton =
+        document.createElement("button");
+
+      editButton.className =
+        "edit-btn";
+
+      editButton.textContent =
+        "✏️ Edit";
+
+
+      editButton.onclick =
         function(){
 
-          image.innerHTML = "🛍️";
+          editProduct(product);
 
         };
 
-      image.appendChild(img);
+
+      const deleteButton =
+        document.createElement("button");
+
+      deleteButton.className =
+        "delete-btn";
+
+      deleteButton.textContent =
+        "🗑️ Delete";
+
+
+      deleteButton.onclick =
+        function(){
+
+          deleteProduct(product);
+
+        };
+
+
+      buttons.appendChild(
+        editButton
+      );
+
+      buttons.appendChild(
+        deleteButton
+      );
+
+
+      info.appendChild(name);
+
+      info.appendChild(category);
+
+      info.appendChild(price);
+
+      info.appendChild(description);
+
+      info.appendChild(buttons);
+
+
+      card.appendChild(image);
+
+      card.appendChild(info);
+
+
+      adminProducts.appendChild(card);
 
     }
-
-    else{
-
-      image.textContent = "🛍️";
-
-    }
-
-    const info =
-      document.createElement("div");
-
-    info.className =
-      "product-info";
-
-    const name =
-      document.createElement("h3");
-
-    name.textContent =
-      product.name ||
-      "Unnamed Product";
-
-    const category =
-      document.createElement("div");
-
-    category.className =
-      "product-category";
-
-    category.textContent =
-      product.category ||
-      "Electronics";
-
-    const price =
-      document.createElement("div");
-
-    price.className =
-      "product-price";
-
-    price.textContent =
-      "KSh " +
-      Number(product.price || 0)
-      .toLocaleString();
-
-    const description =
-      document.createElement("div");
-
-    description.className =
-      "product-description";
-
-    description.textContent =
-      product.description ||
-      "No description";
-
-    const buttons =
-      document.createElement("div");
-
-    buttons.className =
-      "action-buttons";
-
-    const editButton =
-      document.createElement("button");
-
-    editButton.className =
-      "edit-btn";
-
-    editButton.textContent =
-      "✏️ Edit";
-
-    editButton.onclick =
-      function(){
-
-        editProduct(product);
-
-      };
-
-    const deleteButton =
-      document.createElement("button");
-
-    deleteButton.className =
-      "delete-btn";
-
-    deleteButton.textContent =
-      "🗑️ Delete";
-
-    deleteButton.onclick =
-      function(){
-
-        deleteProduct(product);
-
-      };
-
-    buttons.appendChild(editButton);
-
-    buttons.appendChild(deleteButton);
-
-    info.appendChild(name);
-
-    info.appendChild(category);
-
-    info.appendChild(price);
-
-    info.appendChild(description);
-
-    info.appendChild(buttons);
-
-    card.appendChild(image);
-
-    card.appendChild(info);
-
-    adminProducts.appendChild(card);
-
-  });
+  );
 
 }
 
@@ -1110,6 +1238,7 @@ productImage.addEventListener(
 
     const file =
       productImage.files[0];
+
 
     if(!file){
 
@@ -1136,8 +1265,10 @@ productImage.addEventListener(
 
     }
 
+
     const reader =
       new FileReader();
+
 
     reader.onload =
       function(event){
@@ -1152,6 +1283,7 @@ productImage.addEventListener(
 
       };
 
+
     reader.readAsDataURL(file);
 
   }
@@ -1159,7 +1291,7 @@ productImage.addEventListener(
 
 
 /* =====================================================
-   ADD / UPDATE PRODUCT
+   ADD / UPDATE SERVICE
 ===================================================== */
 
 productForm.addEventListener(
@@ -1168,31 +1300,40 @@ productForm.addEventListener(
 
     event.preventDefault();
 
+
     const name =
       productName.value.trim();
 
+
     const price =
-      Number(productPrice.value);
+      Number(
+        productPrice.value
+      );
+
 
     const category =
       productCategory.value.trim();
 
+
     const description =
       productDescription.value.trim();
+
 
     const file =
       productImage.files[0];
 
+
     if(!name){
 
       showStatus(
-        "Please enter the product name.",
+        "Please enter the service name.",
         "error"
       );
 
       return;
 
     }
+
 
     if(
       Number.isNaN(price) ||
@@ -1208,6 +1349,7 @@ productForm.addEventListener(
 
     }
 
+
     if(!category){
 
       showStatus(
@@ -1219,17 +1361,22 @@ productForm.addEventListener(
 
     }
 
-    saveButton.disabled = true;
+
+    saveButton.disabled =
+      true;
+
 
     saveButton.textContent =
       editingProductId
       ? "Updating..."
       : "Saving...";
 
+
     try{
 
       let imageUrl =
-        editingOldImage || null;
+        editingOldImage ||
+        null;
 
 
       /* =================================================
@@ -1239,9 +1386,10 @@ productForm.addEventListener(
       if(file){
 
         showStatus(
-          "Uploading product image...",
+          "Uploading image...",
           "loading"
         );
+
 
         const fileExtension =
           file.name
@@ -1249,11 +1397,18 @@ productForm.addEventListener(
           .pop()
           .toLowerCase();
 
+
         const safeName =
           name
           .toLowerCase()
-          .replace(/[^a-z0-9]+/g,"-")
-          .replace(/^-+|-+$/g,"");
+          .replace(
+            /[^a-z0-9]+/g,
+            "-"
+          )
+          .replace(
+            /^-+|-+$/g,
+            "");
+
 
         const filePath =
           Date.now() +
@@ -1261,6 +1416,7 @@ productForm.addEventListener(
           safeName +
           "." +
           fileExtension;
+
 
         const {
           error: uploadError
@@ -1277,6 +1433,7 @@ productForm.addEventListener(
             }
           );
 
+
         if(uploadError){
 
           throw new Error(
@@ -1286,13 +1443,17 @@ productForm.addEventListener(
 
         }
 
+
         const {
           data: publicData
         } =
         supabaseClient
           .storage
           .from(STORAGE_BUCKET)
-          .getPublicUrl(filePath);
+          .getPublicUrl(
+            filePath
+          );
+
 
         imageUrl =
           publicData.publicUrl;
@@ -1307,9 +1468,10 @@ productForm.addEventListener(
       if(editingProductId){
 
         showStatus(
-          "Updating product...",
+          "Updating service...",
           "loading"
         );
+
 
         const {
           error
@@ -1317,28 +1479,36 @@ productForm.addEventListener(
         await supabaseClient
           .from("products")
           .update({
+
             name:name,
+
             price:price,
+
             category:category,
+
             description:description,
+
             image:imageUrl
+
           })
           .eq(
             "id",
             editingProductId
           );
 
+
         if(error){
 
           throw new Error(
-            "Product update failed: " +
+            "Service update failed: " +
             error.message
           );
 
         }
 
+
         showStatus(
-          "✅ Product updated successfully.",
+          "✅ Service updated successfully.",
           "success"
         );
 
@@ -1352,9 +1522,10 @@ productForm.addEventListener(
       else{
 
         showStatus(
-          "Saving product...",
+          "Saving service...",
           "loading"
         );
+
 
         const {
           error
@@ -1362,28 +1533,37 @@ productForm.addEventListener(
         await supabaseClient
           .from("products")
           .insert({
+
             name:name,
+
             price:price,
+
             category:category,
+
             description:description,
+
             image:imageUrl
+
           });
+
 
         if(error){
 
           throw new Error(
-            "Product save failed: " +
+            "Service save failed: " +
             error.message
           );
 
         }
 
+
         showStatus(
-          "✅ Product added successfully.",
+          "✅ Service added successfully.",
           "success"
         );
 
       }
+
 
       resetProductForm();
 
@@ -1391,12 +1571,14 @@ productForm.addEventListener(
 
     }
 
+
     catch(error){
 
       console.error(
-        "PRODUCT SAVE ERROR:",
+        "SERVICE SAVE ERROR:",
         error
       );
+
 
       showStatus(
         error.message ||
@@ -1406,19 +1588,22 @@ productForm.addEventListener(
 
     }
 
-    saveButton.disabled = false;
+
+    saveButton.disabled =
+      false;
+
 
     saveButton.textContent =
       editingProductId
-      ? "💾 Update Product"
-      : "💾 Save Product";
+      ? "💾 Update Service"
+      : "💾 Save Service";
 
   }
 );
 
 
 /* =====================================================
-   EDIT PRODUCT
+   EDIT SERVICE
 ===================================================== */
 
 function editProduct(product){
@@ -1426,25 +1611,39 @@ function editProduct(product){
   editingProductId =
     product.id;
 
+
   editingOldImage =
-    product.image || null;
+    product.image ||
+    null;
+
 
   formTitle.textContent =
-    "✏️ Edit Product";
+    "✏️ Edit Service";
+
 
   productName.value =
-    product.name || "";
+    product.name ||
+    "";
+
 
   productPrice.value =
-    product.price || "";
+    product.price ||
+    "";
+
 
   productCategory.value =
-    product.category || "";
+    product.category ||
+    "";
+
 
   productDescription.value =
-    product.description || "";
+    product.description ||
+    "";
 
-  productImage.value = "";
+
+  productImage.value =
+    "";
+
 
   if(product.image){
 
@@ -1452,7 +1651,7 @@ function editProduct(product){
     `
     <img
       src="${product.image}"
-      alt="Current product image"
+      alt="Current service image"
     >
     `;
 
@@ -1465,15 +1664,21 @@ function editProduct(product){
 
   }
 
+
   saveButton.textContent =
-    "💾 Update Product";
+    "💾 Update Service";
+
 
   cancelButton.style.display =
     "block";
 
+
   window.scrollTo({
+
     top:0,
+
     behavior:"smooth"
+
   });
 
 }
@@ -1500,18 +1705,26 @@ function resetProductForm(){
 
   productForm.reset();
 
-  editingProductId = null;
 
-  editingOldImage = null;
+  editingProductId =
+    null;
+
+
+  editingOldImage =
+    null;
+
 
   formTitle.textContent =
-    "➕ Add Product";
+    "➕ Add Service";
+
 
   saveButton.textContent =
-    "💾 Save Product";
+    "💾 Save Service";
+
 
   cancelButton.style.display =
     "none";
+
 
   imagePreview.innerHTML =
     "📷 Select an image";
@@ -1520,7 +1733,7 @@ function resetProductForm(){
 
 
 /* =====================================================
-   DELETE PRODUCT
+   DELETE SERVICE
 ===================================================== */
 
 async function deleteProduct(product){
@@ -1532,16 +1745,19 @@ async function deleteProduct(product){
       "\"?"
     );
 
+
   if(!confirmed){
 
     return;
 
   }
 
+
   showStatus(
-    "Deleting product...",
+    "Deleting service...",
     "loading"
   );
+
 
   const {
     error
@@ -1554,6 +1770,7 @@ async function deleteProduct(product){
       product.id
     );
 
+
   if(error){
 
     console.error(
@@ -1561,8 +1778,9 @@ async function deleteProduct(product){
       error
     );
 
+
     showStatus(
-      "Could not delete product: " +
+      "Could not delete service: " +
       error.message,
       "error"
     );
@@ -1571,10 +1789,12 @@ async function deleteProduct(product){
 
   }
 
+
   showStatus(
-    "✅ Product deleted successfully.",
+    "✅ Service deleted successfully.",
     "success"
   );
+
 
   await loadProducts();
 
