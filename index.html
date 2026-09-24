@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,8 @@
 <title>Swalleh Prints | Printing & Branding Solutions</title>
 
 <meta name="description" content="Swalleh Prints offers T-shirt printing, graphic design, branding, posters, stickers, banners, caps and printing solutions in Kenya.">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
 *{
@@ -215,6 +216,33 @@ section{
     color:#cccccc;
 }
 
+.service-price{
+    margin-top:12px;
+    color:#00f7ff;
+    font-weight:bold;
+}
+
+.service-image{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:18px;
+    border:1px solid #27274d;
+}
+
+.loading{
+    text-align:center;
+    color:#bbbbbb;
+    padding:30px;
+}
+
+.error-message{
+    text-align:center;
+    color:#ff7777;
+    padding:20px;
+}
+
 .about{
     background:#08081a;
 }
@@ -388,6 +416,7 @@ footer strong{
 
 <header>
     <div class="navbar">
+
         <a href="#home" class="logo">
             Swalleh <span>Prints</span>
         </a>
@@ -399,12 +428,14 @@ footer strong{
             <a href="#how-it-works">How It Works</a>
             <a href="#contact">Contact</a>
         </nav>
+
     </div>
 </header>
 
 <main>
 
 <section class="hero" id="home">
+
     <div class="hero-content">
 
         <h1>
@@ -417,6 +448,7 @@ footer strong{
         </p>
 
         <div class="buttons">
+
             <a
                 class="btn btn-primary"
                 href="https://wa.me/254724566417"
@@ -426,77 +458,40 @@ footer strong{
                 Order on WhatsApp
             </a>
 
-            <a class="btn btn-secondary" href="#services">
+            <a
+                class="btn btn-secondary"
+                href="#services"
+            >
                 View Services
             </a>
+
         </div>
 
     </div>
+
 </section>
+
 
 <section id="services">
 
     <div class="container">
 
         <div class="section-title">
+
             <h2>Our Services</h2>
-            <p>Quality printing and branding solutions for your needs.</p>
+
+            <p>
+                Quality printing and branding solutions for your needs.
+            </p>
+
         </div>
 
-        <div class="services">
+        <!-- SERVICES FROM SUPABASE WILL APPEAR HERE -->
 
-            <div class="service-card">
-                <div class="service-icon">👕</div>
-                <h3>T-Shirt Printing</h3>
-                <p>
-                    Customized T-shirts for businesses, events,
-                    teams, groups and personal occasions.
-                </p>
-            </div>
+        <div class="services" id="services-container">
 
-            <div class="service-card">
-                <div class="service-icon">🎨</div>
-                <h3>Graphic Design</h3>
-                <p>
-                    Professional designs for logos, posters,
-                    advertisements, social media and more.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🏷️</div>
-                <h3>Branding</h3>
-                <p>
-                    Branding solutions to help your business
-                    stand out and look professional.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🖼️</div>
-                <h3>Banners & Posters</h3>
-                <p>
-                    Attractive banners and posters for promotions,
-                    events, businesses and announcements.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🏷️</div>
-                <h3>Stickers & Labels</h3>
-                <p>
-                    Custom stickers and labels for products,
-                    packaging, businesses and personal use.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🧢</div>
-                <h3>Caps & Merchandise</h3>
-                <p>
-                    Customized caps and merchandise for brands,
-                    groups, events and special occasions.
-                </p>
+            <div class="loading">
+                Loading our services...
             </div>
 
         </div>
@@ -505,18 +500,25 @@ footer strong{
 
 </section>
 
+
 <section class="about" id="about">
 
     <div class="container">
 
         <div class="section-title">
+
             <h2>About Swalleh Prints</h2>
-            <p>Turning ideas into visible brands.</p>
+
+            <p>
+                Turning ideas into visible brands.
+            </p>
+
         </div>
 
         <div class="about-content">
 
             <div class="about-box">
+
                 <h3>Who We Are</h3>
 
                 <p>
@@ -524,9 +526,11 @@ footer strong{
                     focused on helping individuals, businesses,
                     organizations and events bring their ideas to life.
                 </p>
+
             </div>
 
             <div class="about-box">
+
                 <h3>What We Do</h3>
 
                 <p>
@@ -535,6 +539,7 @@ footer strong{
                     we provide practical printing solutions tailored
                     to your needs.
                 </p>
+
             </div>
 
         </div>
@@ -542,52 +547,74 @@ footer strong{
     </div>
 
 </section>
+
 
 <section id="how-it-works">
 
     <div class="container">
 
         <div class="section-title">
+
             <h2>How It Works</h2>
-            <p>Getting your order started is simple.</p>
+
+            <p>
+                Getting your order started is simple.
+            </p>
+
         </div>
 
         <div class="steps">
 
             <div class="step">
+
                 <div class="step-number">1</div>
+
                 <h3>Contact Us</h3>
+
                 <p>
                     Send us a message on WhatsApp and tell us
                     what you need.
                 </p>
+
             </div>
 
             <div class="step">
+
                 <div class="step-number">2</div>
+
                 <h3>Share Your Idea</h3>
+
                 <p>
                     Send your design, logo, text or explain
                     what you want created.
                 </p>
+
             </div>
 
             <div class="step">
+
                 <div class="step-number">3</div>
+
                 <h3>Confirm Your Order</h3>
+
                 <p>
                     We discuss the details, quantity and price
                     before production.
                 </p>
+
             </div>
 
             <div class="step">
+
                 <div class="step-number">4</div>
+
                 <h3>Get Your Product</h3>
+
                 <p>
                     Your customized printing or branding order
                     is prepared for you.
                 </p>
+
             </div>
 
         </div>
@@ -595,6 +622,7 @@ footer strong{
     </div>
 
 </section>
+
 
 <section class="cta">
 
@@ -619,20 +647,30 @@ footer strong{
 
 </section>
 
+
 <section class="contact" id="contact">
 
     <div class="container">
 
         <div class="section-title">
+
             <h2>Contact Us</h2>
-            <p>Get in touch and let's discuss your printing needs.</p>
+
+            <p>
+                Get in touch and let's discuss your printing needs.
+            </p>
+
         </div>
 
         <div class="contact-grid">
 
             <div class="contact-card">
+
                 <h3>WhatsApp</h3>
-                <p>+254 724 566 417</p>
+
+                <p>
+                    +254 724 566 417
+                </p>
 
                 <br>
 
@@ -644,16 +682,27 @@ footer strong{
                 >
                     Message Us
                 </a>
+
             </div>
 
             <div class="contact-card">
+
                 <h3>Email</h3>
-                <p>swallehgibon2@gmail.com</p>
+
+                <p>
+                    swallehgibon2@gmail.com
+                </p>
+
             </div>
 
             <div class="contact-card">
+
                 <h3>Location</h3>
-                <p>Kenya</p>
+
+                <p>
+                    Kenya
+                </p>
+
             </div>
 
         </div>
@@ -663,6 +712,7 @@ footer strong{
 </section>
 
 </main>
+
 
 <footer>
 
@@ -677,6 +727,271 @@ footer strong{
 
 </footer>
 
+
+<script>
+
+/* ================================
+   SUPABASE CONNECTION
+================================ */
+
+const SUPABASE_URL =
+    "https://rbgqqtayaexgyhozufpg.supabase.co";
+
+const SUPABASE_KEY =
+    "sb_publishable_FC5-3_O-bJ6oQKt3SESRlg_TUeT70cl";
+
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+    );
+
+
+/* ================================
+   ICONS FOR CATEGORIES
+================================ */
+
+function getIcon(category){
+
+    const icons = {
+
+        "t-shirt printing": "👕",
+        "graphic design": "🎨",
+        "branding": "🏷️",
+        "banners": "🖼️",
+        "posters": "🖼️",
+        "stickers": "🏷️",
+        "caps": "🧢",
+        "business cards": "💳",
+        "flyers": "📄",
+        "brochures": "📖",
+        "invitation cards": "💌",
+        "signage": "🪧",
+        "printing": "🖨️",
+        "other": "🖨️"
+
+    };
+
+    const key =
+        String(category || "")
+        .toLowerCase()
+        .trim();
+
+    return icons[key] || "🖨️";
+}
+
+
+/* ================================
+   LOAD SERVICES
+================================ */
+
+async function loadServices(){
+
+    const container =
+        document.getElementById("services-container");
+
+    try{
+
+        const { data, error } =
+            await supabaseClient
+                .from("products")
+                .select("*")
+                .order("id", { ascending:false });
+
+
+        if(error){
+
+            console.error(
+                "Supabase error:",
+                error
+            );
+
+            container.innerHTML = `
+                <div class="error-message">
+                    Unable to load services at the moment.
+                </div>
+            `;
+
+            return;
+        }
+
+
+        if(!data || data.length === 0){
+
+            container.innerHTML = `
+
+                <div class="service-card">
+
+                    <div class="service-icon">👕</div>
+
+                    <h3>T-Shirt Printing</h3>
+
+                    <p>
+                        Customized T-shirts for businesses,
+                        events, teams, groups and personal occasions.
+                    </p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <div class="service-icon">🎨</div>
+
+                    <h3>Graphic Design</h3>
+
+                    <p>
+                        Professional designs for logos,
+                        posters, advertisements and social media.
+                    </p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <div class="service-icon">🏷️</div>
+
+                    <h3>Branding</h3>
+
+                    <p>
+                        Branding solutions to help your business
+                        stand out and look professional.
+                    </p>
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+
+        container.innerHTML = "";
+
+
+        data.forEach(product => {
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "service-card";
+
+
+            const icon =
+                getIcon(product.category);
+
+
+            let imageHTML = "";
+
+            if(product.image){
+
+                imageHTML = `
+                    <img
+                        class="service-image"
+                        src="${product.image}"
+                        alt="${escapeHTML(product.name)}"
+                    >
+                `;
+
+            }
+
+
+            let priceHTML = "";
+
+            if(
+                product.price !== null &&
+                product.price !== undefined &&
+                product.price !== ""
+            ){
+
+                priceHTML = `
+                    <div class="service-price">
+                        From KSh ${product.price}
+                    </div>
+                `;
+
+            }
+
+
+            card.innerHTML = `
+
+                ${imageHTML}
+
+                ${
+                    product.image
+                    ? ""
+                    : `<div class="service-icon">${icon}</div>`
+                }
+
+                <h3>
+                    ${escapeHTML(product.name)}
+                </h3>
+
+                <p>
+                    ${
+                        escapeHTML(
+                            product.description ||
+                            "Quality printing and branding service."
+                        )
+                    }
+                </p>
+
+                ${priceHTML}
+
+            `;
+
+
+            container.appendChild(card);
+
+        });
+
+    }
+
+    catch(error){
+
+        console.error(
+            "Unexpected error:",
+            error
+        );
+
+        container.innerHTML = `
+            <div class="error-message">
+                Unable to load services.
+            </div>
+        `;
+
+    }
+
+}
+
+
+/* ================================
+   SAFELY DISPLAY TEXT
+================================ */
+
+function escapeHTML(text){
+
+    if(text === null || text === undefined){
+        return "";
+    }
+
+    return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+/* ================================
+   START
+================================ */
+
+loadServices();
+
+</script>
+
 </body>
 </html>
-```
